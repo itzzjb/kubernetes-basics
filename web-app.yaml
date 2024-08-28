@@ -10,7 +10,7 @@ metadata:
     app: webapp
 spec:
   # This is the number of replicas that we want to create
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: webapp
