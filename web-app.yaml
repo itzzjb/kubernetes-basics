@@ -61,3 +61,7 @@ spec:
     - protocol: TCP
       port: 8081
       targetPort: 8081
+      # Even we have exposed the port 27017, we can't access the application from outside
+      # We need to set a nodePort so that we can use to access the application from outside
+      # Port range should be between 30000-32767
+      nodePort: 30001
