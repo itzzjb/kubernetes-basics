@@ -1,0 +1,7 @@
+# This file is used to store the configuration of the mongodb database (Non-sensitive data)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-config
+data:
+  MONGO_URL: #comeback here
