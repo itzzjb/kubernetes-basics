@@ -54,6 +54,8 @@ kind: Service
 metadata:
   name: webapp-service
 spec:
+  # We need to specify the type as NodePort, otherwise it will be ClusterIP
+  type: NodePort
   selector:
     # This label is same as the Deployment.
     app: webapp
@@ -64,4 +66,4 @@ spec:
       # Even we have exposed the port 27017, we can't access the application from outside
       # We need to set a nodePort so that we can use to access the application from outside
       # Port range should be between 30000-32767
-      nodePort: 30001
+      nodePort: 30100
